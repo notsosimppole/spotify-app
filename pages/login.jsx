@@ -1,5 +1,6 @@
 import React from 'react'
 import {getProviders, signIn} from "next-auth/react"
+import Image from 'next/image'
 
 const Login = ({providers}) => {
 
@@ -7,12 +8,13 @@ const Login = ({providers}) => {
 
   return (
     <div>
-      <img src = "https://www.fightforthefuture.org/actions/wp-content/uploads/2021/12/MrEk.jpg" className='h-[100px] mb-5'/>
+      <Image alt = " " src = "https://www.fightforthefuture.org/actions/wp-content/uploads/2021/12/MrEk.jpg" className='h-[100px] mb-5' />
 
       {
         Object.values(providers).map((provider) => (
-          <div>
-            <button>
+
+          <div key={provider}>
+            <button >
               Test
             </button>
           </div>
