@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Center from '../components/Center'
 import Sidebar from '../components/sidebar'
 
 const Home = () => {
@@ -10,8 +11,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=''>
+      <main className='flex'>
         <Sidebar />
+        <Center />
       </main>
       <div>
         {/*Player */}
