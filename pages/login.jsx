@@ -4,8 +4,6 @@ import Head from 'next/head'
 
 const Login = ({providers}) => {
 
-  console.log()
-
   return (
     
     <div className='flex flex-col bg-black min-h-screen w-full justify-center items-center'>

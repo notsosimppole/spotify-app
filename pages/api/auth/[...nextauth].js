@@ -54,8 +54,6 @@ export default NextAuth({
         }
       }
       if(Date.now() < token.accessTokenExpires){
-        console.log("Valid Token")
-        
         return token;
       }
 
