@@ -11,7 +11,7 @@ const Sidebar = () => {
   const {data: session,status} = useSession()
   const [playlistId, setPlaylistId] = useRecoilState(playlistIdState)
 
-
+  console.log(playlistId)
   useEffect(() => {
     if(spotifyApi.getAccessToken()){
       spotifyApi.getUserPlaylists().then((data) => {
@@ -21,8 +21,8 @@ const Sidebar = () => {
   }, [session, spotifyApi])
 
   return (
-    <div className='overflow-y-scroll scrollbar-hide h-screen '>
-      <div className='text-gray-600 p-5 text-sm md:text-lg border-r-gray-900 space-y-4'>
+    <div className='overflow-y-scroll scrollbar-hide h-screen text-xs lg:text-sm '>
+      <div className='text-gray-600 p-5 md:text-lg border-r-gray-900 space-y-4 text-xs lg:text-sm max-w-[12rem] lg:max-w-[14rem] lg:min-w-fit hidden md:block pb-36'>
 
       <button className='flex items-center space-x-2 hover:text-white' onClick={() => signOut()} >
           <LogoutIcon className='w-5 h-5'/>
